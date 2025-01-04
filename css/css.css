@@ -1,0 +1,275 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+padding: 0;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+margin: 0;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+min-height: 100vh;
+scroll-behavior: smooth;
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+list-style: none;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+text-decoration-skip-ink: none;
+}
+a{
+    text-decoration-color: black;
+    text-decoration: none;
+}
+/* Упрощаем работу с изображениями */
+img {
+max-width: 100%;
+display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+}
+
+.wrapper{
+    height: 50%;
+    background-color: #E7EEDE;
+    display: flex;
+    justify-content: space-around;
+}
+.header{
+    width: 100%;
+    height: auto;    
+}
+.header__title{
+    margin:0px 30% 0px 30%;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 128px;
+    font-family: "Poiret One";
+}
+.header__title1{
+    position: absolute;
+    top: 0; left: 0; z-index: 1;
+}
+.header__title2{
+    position: absolute;
+    top:80; left: 160; z-index: 2;
+}
+.line{
+    height: 4px;
+    background: linear-gradient(to right, #112D46, #A0AC93, #173f63);
+    width: 100%;
+}
+@media (max-width: 940px) {
+    .header__title{
+        margin:0px 15% 0px 15%;
+    }
+}
+@media (max-width: 680px) {
+    .header__title{
+        margin:0px 15% 0px 15%;
+        font-size: 100px;
+    }
+    .header__title2{
+        top:80; left: 120;
+    }
+    .wrapper{
+        height: 40%;
+    }
+}
+@media (max-width: 530px) {
+    .header__title{
+        margin:0px 10% 0px 10%;
+        font-size: 95px;
+    }
+    .header__title2{
+        top:80; left: 100;
+    }
+}
+@media (max-width: 440px) {
+    .header__title{
+        margin:0px 5% 0px 5%;
+        font-size:85px;
+    }
+    .header__title2{
+        left: 80;
+    }
+}
+@media (max-width: 385px){
+    .header__title{
+        margin:0px 3% 0px 3%;
+        font-size:80px;
+    }
+}
+
+
+.hamburger {
+    margin: 10px;
+}
+
+.bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.sidenav {
+    font-family: "Poiret One";
+    font-weight: 700;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #d9d3d3;
+    display: block;
+    transition: 0.3s;
+    letter-spacing: 2;
+}
+  /* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #818181;
+}
+  /* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+.main{
+    font-family: "Poiret One";
+    font-weight: 600;
+    letter-spacing: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C5D8BF;
+    height: 50%;
+}
+.main__grid{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr); 
+gap: 20px; 
+width: 50%; 
+height: 180px;
+}
+.grid-item{
+display: flex;
+justify-content: center;
+align-items: center;
+border: 3px solid #ccc;
+font-size: 20px;
+cursor: pointer;
+}
+.item1:hover{
+    background-color: rgb(91, 152, 187);
+    border: 3px solid rgb(36, 73, 94);
+}
+.item2:hover{
+    background-color: rgb(200, 214, 135);
+    border: 3px solid rgb(91, 103, 39);
+}
+.item3:hover{
+    background-color: rgb(225, 223, 103);
+    border: 3px solid rgb(204, 201, 47);
+}
+.item4:hover{
+    background-color: rgb(247, 178, 74);
+    border: 3px solid rgb(205, 138, 37);
+}
+.grid-item__img{
+    height: 30px;
+    width: 30px;
+    margin: 0px 12px 0px 0px;
+}
+@media (max-width: 600px) {
+    .main__grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: none; 
+    }
+    .grid-item__img{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media (max-width: 660px){
+    .main{
+    height: 60%;
+    }
+}
+.sidenavtxt{
+    margin: 5px 15px;
+}
+#more {
+    display: none;
+    color: #d9d3d3;
+    font-size: 16px;
+}

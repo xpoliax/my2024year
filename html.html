@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my2024</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" onclick="myFunction()" id="myBtn">About project</a>
+        <p class="sidenavtxt"><span id="dots">...</span><span id="more">Hi! It`s a small conclusion of my 2024. So you`re welcom to look through some photos and videos from this amazing year!</span></p>
+        <a href="winter/winter.html">Winter</a>
+        <a href="spring/spring.html">Spring</a>
+        <a href="summer/summer.html">Summer</a>
+        <a href="autumn/autummn.html">Autumn</a>
+    </div>
+    <!-- <span onclick="openNav()"><div class="opensidebar">OPEN</div></span> -->
+
+        <div class="line"></div>
+    <div class="wrapper">
+        <span onclick="openNav()"> <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div></span>
+        <div class="header">
+            <div class="header__title">
+                <p class="header__title1">my</p>
+                <p class="header__title2">2024</p>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="main">
+        <div class="main__grid">
+            <button onclick="location.href='winter/winter.html';" class="grid-item item1"><img class="grid-item__img" src="img/snowflake.png" alt="">Winter</button>
+            <button onclick="location.href='spring/spring.html';" class="grid-item item2"><img class="grid-item__img" src="img/sakura.png" alt="">Spring</button>
+            <button onclick="location.href='summer/summer.html';" class="grid-item item3"><img class="grid-item__img" src="img/sunny-day.png" alt="">Summer</button>
+            <button onclick="location.href='autumn/autummn.html';" class="grid-item item4"><img class="grid-item__img" src="img/leaf-fall.png" alt="">Autumn</button>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
